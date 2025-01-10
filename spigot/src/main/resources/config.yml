@@ -54,7 +54,7 @@ player_max_locked_block_count: -1
 
 # The cooldown between messages hinting players that they can
 # protect their blocks.
-lock_hint_cooldown_in_seconds: 10
+lock_hint_cooldown_in_seconds: 60
 
 # This defines the minimum similarity percentage that a player name
 # can have to the friend search query at which it still shows up. By

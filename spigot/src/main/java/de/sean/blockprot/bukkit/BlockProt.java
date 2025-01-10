@@ -50,7 +50,7 @@ import java.util.Objects;
 /**
  * The main plugin instance of BlockProt.
  */
-public final class BlockProt extends JavaPlugin {
+public class BlockProt extends JavaPlugin {
     /**
      * The bStats plugin ID.
      */
@@ -66,7 +66,7 @@ public final class BlockProt extends JavaPlugin {
     private static BlockProt instance;
 
     @Nullable
-    private static DefaultConfig defaultConfig = null;
+    protected static DefaultConfig defaultConfig = null;
 
     private final ArrayList<PluginIntegration> integrations = new ArrayList<>();
 

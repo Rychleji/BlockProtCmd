@@ -52,7 +52,7 @@ import java.util.Objects;
 import java.util.UUID;
 
 public class BlockEventListener implements Listener {
-    private final BlockProt blockProt;
+    protected final BlockProt blockProt;
 
     public BlockEventListener(@NotNull BlockProt blockProt) {
         this.blockProt = blockProt;
