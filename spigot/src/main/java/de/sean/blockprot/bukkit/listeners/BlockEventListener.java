@@ -19,6 +19,7 @@
 package de.sean.blockprot.bukkit.listeners;
 
 import com.google.common.collect.Iterables;
+import cz.rychleji.blockprot.bukkit.utils.TweakUtils;
 import de.sean.blockprot.bukkit.BlockProt;
 import de.sean.blockprot.bukkit.Permissions;
 import de.sean.blockprot.bukkit.Translator;
@@ -151,6 +152,9 @@ public class BlockEventListener implements Listener {
         // We only try to lock the block if it isn't locked already.
         // Shulker boxes might already be locked, from previous placing.
         if (handler.isNotProtected()) {
+            TweakUtils utils = new TweakUtils(BlockProt.getDefaultConfig());
+            if(utils.IsBlockWithInventory(block)) return; //block is not a chest or any other tile from config
+
             PlayerSettingsHandler settingsHandler = new PlayerSettingsHandler(event.getPlayer());
 
             // Lock the block instantly if the setting is enabled.
