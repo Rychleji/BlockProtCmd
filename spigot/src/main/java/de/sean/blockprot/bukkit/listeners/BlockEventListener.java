@@ -153,7 +153,7 @@ public class BlockEventListener implements Listener {
         // Shulker boxes might already be locked, from previous placing.
         if (handler.isNotProtected()) {
             TweakUtils utils = new TweakUtils(BlockProt.getDefaultConfig());
-            if(utils.IsBlockWithInventory(block)) return; //block is not a chest or any other tile from config
+            if(!utils.IsBlockWithInventory(block)) return; //block is not a chest or any other tile from config
 
             PlayerSettingsHandler settingsHandler = new PlayerSettingsHandler(event.getPlayer());
 
